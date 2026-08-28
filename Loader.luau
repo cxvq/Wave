@@ -1,12 +1,12 @@
-if (getgenv()["loaded"]) then
+if (getgenv().loaded) then
     return;
 end;
-getgenv()["loaded"] = true;
+getgenv().loaded = true;
 
 if (identifyexecutor():lower() ~= "volt") then
-    getgenv()["setfflag"] = newcclosure(function() end);
+    getgenv().setfflag = newcclosure(function() end);
 end;
 
-if (game["GameId"] == 7094518649) or (game["GameId"] == 10555202405) then
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/396c138ebc1a201c8e052d8c5789a65f.lua"))();
+if (game.GameId == 7094518649) then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/db2e1f77155afa5735e62efb5316f897.lua"))();
 end;
